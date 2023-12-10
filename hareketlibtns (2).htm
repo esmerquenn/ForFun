@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            text-align: center;
+        }
+        button{
+            position: absolute;
+            padding: 10px;
+            width: 130px;
+            background: rgb(147, 252, 164);
+            border: 2px solid rgb(2, 88, 2);
+            font: bold 1.1em sans-serif
+
+        }
+    </style>
+</head>
+<body id="deyis">
+    <div>
+        <button onclick="toxun()" onmouseover="bas()">Kick me!</button>
+    </div> 
+
+    <script>
+        const btn = document.querySelector("button")
+        const deyis = document.getElementById('deyis')
+
+        function bas(){
+            const maxWidth = window.innerWidth - btn.offsetWidth;
+            const maxHeight = window.innerHeight - btn.offsetHeight;
+            const X = Math.floor(Math.random() * maxWidth)
+            const Y = Math.floor(Math.random() * maxHeight)
+            btn.style.left = X + "px"
+            btn.style.top = Y + "px"
+            btn.style.rotate = Math.floor(Math.random() * 1800) + "deg";
+
+            const red = Math.floor(Math.random() * 255);
+            const green = Math.floor(Math.random() * 255);
+            const blue = Math.floor(Math.random() * 255);
+            deyis.style.transition = ".7s"
+            deyis.style.backgroundColor = "rgb("+ red +", "+ green +", "+ blue +")"
+            
+        }
+    </script>
+    
+</body>
+</html>

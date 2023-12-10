@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+            body{
+                text-align: center;
+            }
+            button{
+                padding: 10px;
+                width: 130px;
+                background: rgb(147, 252, 164);
+                border: 2px solid rgb(2, 88, 2);
+                font: bold 1.1em sans-serif;
+                margin-top: 45vh;
+            }
+        </style>
+    </head>
+    <body id="deyis">
+        <button id="btn"  onclick="bas()">Kick me!</button>    
+
+        <script>
+
+            let deyis = document.getElementById('deyis')
+            let btn = document.getElementById('btn')
+
+
+            function bas(){
+                const red = Math.floor(Math.random() * 256);
+                const green = Math.floor(Math.random() * 256);
+                const blue = Math.floor(Math.random() * 256);
+                deyis.style.transition = ".7s"
+                deyis.style.backgroundColor = "rgb("+ red +", "+ green +", "+ blue +")"
+                btn.style.rotate = Math.floor(Math.random() * 1800) + "deg";
+            }
+
+        </script>
+    </body>
+</html>
